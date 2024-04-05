@@ -1,4 +1,4 @@
-declare module argus {
+declare module "@marshift/argus" {
     interface ArgusContext {
         argv: string[];
         consumePositionalArg: () => string;

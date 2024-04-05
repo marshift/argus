@@ -2,6 +2,8 @@
 // initially ported to TS for use in spectrum
 // updated once more for NPM publishing
 
+import type { ArgusContext } from "@marshift/argus";
+
 /**
  * 
  * @param argv The arguments to parse
@@ -48,7 +50,7 @@ export function getOptionalArg(argv: string[], condition: RegExp) {
  * @param argv The arguments to parse 
  * @returns A "scoped" variant of the library's functions
  */
-export function createContext(argv: string[]): argus.ArgusContext {
+export function createContext(argv: string[]): ArgusContext {
     let _posArgIdx = 0;
     
     return {
