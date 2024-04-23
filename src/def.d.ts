@@ -1,7 +1,7 @@
 declare module "@marshift/argus" {
     interface ArgusContext {
         argv: string[];
-        getPositionalArg: (index: number) => string;
+        getPositionalArg: (position: number) => string;
         consumePositionalArg: () => string;
         hasOptionalArg: (condition: RegExp) => boolean;
         getOptionalArg: (condition: RegExp) => string | undefined;

@@ -55,7 +55,7 @@ export function createContext(argv: string[]): ArgusContext {
     
     return {
         argv,
-        getPositionalArg: (index) => getPositionalArg(argv, index),
+        getPositionalArg: (position) => getPositionalArg(argv, position),
         consumePositionalArg: () => {
             const value = getPositionalArg(argv, _posArgIdx);
             
