@@ -1,16 +1,17 @@
 {
 	"name": "@marshift/argus",
 	"description": "marsh's tiny argument parsing library",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"main": "dist/index.js",
-	"types": "src/def.d.ts",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.ts",
 	"scripts": {
-		"build": "tsc",
-		"prepack": "npm run build"
+		"prepublish": "tsup ./src/index.ts --dts --format esm,cjs"
 	},
 	"author": "marshift",
 	"license": "BSD-3-Clause",
 	"devDependencies": {
-		"typescript": "^5.4.4"
+		"tsup": "^8.3.0",
+		"typescript": "^5.6.2"
 	}
 }

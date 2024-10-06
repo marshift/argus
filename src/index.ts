@@ -2,8 +2,6 @@
 // initially ported to TS for use in spectrum
 // updated once more for NPM publishing
 
-import type { ArgusContext } from "@marshift/argus";
-
 /**
  * @param argv The arguments to parse
  * @param position The position to look up
@@ -42,9 +40,26 @@ export function getOptionalArg(argv: string[], condition: RegExp) {
 	return splitArg[1];
 }
 
+interface ArgusContext {
+	/** The raw arguments passed to the context */
+	argv: string[];
+	/** @see {@link getPositionalArg} */
+	getPositionalArg: (position: number, required?: boolean) => string;
+	/**
+	 * @param required Whether the consumed argument is required, default true
+	 * @returns The value of the consumed argument
+	 */
+	consumePositionalArg: (required?: boolean) => string;
+	/** @see {@link hasOptionalArg} */
+	hasOptionalArg: (condition: RegExp) => boolean;
+	/** @see {@link getPositionalArg} */
+	getOptionalArg: (condition: RegExp) => string | undefined;
+}
+
 /**
  * @param argv The arguments to parse
  * @returns A "scoped" variant of the library's functions
+ * @see {@link ArgusContext}
  */
 export function createContext(argv: string[]): ArgusContext {
 	let _posArgIdx = 0;
