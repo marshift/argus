@@ -1,7 +1,7 @@
 {
     "name": "@marshift/argus",
     "description": "marsh's tiny argument parsing library",
-    "version": "1.0.3",
+    "version": "1.1.0",
     "main": "dist/index.js",
     "types": "src/def.d.ts",
     "scripts": {
