@@ -1,11 +1,11 @@
 {
-    "include": ["src"],
-    "compilerOptions": {
-        "module": "CommonJS",
-        "target": "ESNext",
-        "outDir": "dist",
-        "strict": true,
-        "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
-    }
+	"include": ["src"],
+	"compilerOptions": {
+		"module": "CommonJS",
+		"target": "ESNext",
+		"outDir": "dist",
+		"strict": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true
+	}
 }
