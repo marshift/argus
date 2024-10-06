@@ -40,7 +40,7 @@ export function getOptionalArg(argv: string[], condition: RegExp) {
 	return splitArg[1];
 }
 
-interface ArgusContext {
+export interface ArgusContext {
 	/** The raw arguments passed to the context */
 	argv: string[];
 	/** @see {@link getPositionalArg} */
