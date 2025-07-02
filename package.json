@@ -11,7 +11,7 @@
 	"author": "marshift",
 	"license": "BSD-3-Clause",
 	"devDependencies": {
-		"tsup": "^8.3.0",
-		"typescript": "^5.6.2"
+		"tsup": "^8.5.0",
+		"typescript": "^5.8.3"
 	}
 }
